@@ -1,49 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Invitación XV Lucía Raquel</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=EB+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet"/>
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#fffafc;font-family:'Montserrat',sans-serif;overflow-x:hidden}
-.contenedor{max-width:1080px;margin:auto;display:flex;flex-direction:column;align-items:center}
-.encabezado{position:relative;display:flex;flex-direction:column;align-items:center;overflow:hidden;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.25),0 4px 10px rgba(0,0,0,.15)}
-.imagen-encabezado{width:100%;max-height:100vh;object-fit:contain}
-.contador{position:absolute;top:85%;left:50%;transform:translateX(-50%);display:flex;gap:18px;padding:8px 15px;text-align:center;z-index:2}
-.contador div{display:flex;flex-direction:column;align-items:center;min-width:70px}
-.contador span{font-size:2.4em;font-weight:bold;color:#cd6796;font-family:'Great Vibes',cursive;line-height:1.1;text-shadow:0 0 1px #cd6796}
-.contador label{font-size:1.5em;font-weight:bold;color:#cd6796;font-family:'Great Vibes',cursive;margin-top:4px;line-height:1.1;text-shadow:0 0 1px #cd6796}
-.boton-musica{position:absolute;top:15px;right:15px;background:rgba(255,255,255,.7);border:none;border-radius:50%;width:40px;height:40px;font-size:20px;color:#cd6796;cursor:pointer;display:flex;justify-content:center;align-items:center;z-index:3}
-.boton-musica:hover{background:rgba(255,255,255,.9)}
-.rectangulo-rosa{width:100%;display:flex;justify-content:center;background:#fffafc;position:relative}
-.fondo-rosa{max-width:410px;display:block;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.25),0 4px 10px rgba(0,0,0,.15)}
-.contenido-rosa,.contenido-padres{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:410px;width:100%;text-align:center;z-index:2}
-.contenido-rosa{color:#cd6796;font-family:'EB Garamond',serif;font-weight:700;font-size:1.6em;line-height:1.4;opacity:0;transition:opacity 2.5s}
-.contenido-rosa.visible{opacity:1}
-@keyframes bailar{0%{transform:translateX(0) rotate(0)}25%{transform:translateX(-5px) rotate(-3deg)}50%{transform:translateX(0) rotate(0)}75%{transform:translateX(5px) rotate(3deg)}100%{transform:translateX(0) rotate(0)}}
-.corazon{margin-top:20px;width:60px;animation:bailar 3s infinite ease-in-out}
-.contenido-padres{font-size:1.4em;line-height:1.5;color:#cd6796}
-.contenido-padres .great{font-family:'Great Vibes',cursive;font-size:1.6em}
-.wrap-ubicacion{position:absolute;left:50%;transform:translateX(-50%);bottom:16%;z-index:2;text-align:center}
-.wrap-confirmacion{position:absolute;left:50%;transform:translateX(-50%);bottom:9.5%;z-index:3;text-align:center}
-@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
-.boton-ubicacion{padding:8px 16px;background:#fad5e6;border:2px solid #cd6796;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:1em;color:#cd6796;text-decoration:none;display:inline-block;animation:pulse 2s infinite}
-.boton-ubicacion:hover{background:#fce6f0}
-.bloque-padres,.bloque-ceremonia,.bloque-recepcion,.bloque-despedida{opacity:0;transition:all 1.5s ease;position:relative}
-.posicion-padres.visible .bloque-padres{opacity:1;transform:translateY(0)}
-.bloque-padres{transform:translateY(60px)}
-.posicion-ceremonia.visible .bloque-ceremonia{opacity:1;transform:translateX(0)}
-.bloque-ceremonia{transform:translateX(-60px)}
-.posicion-recepcion.visible .bloque-recepcion{opacity:1;transform:translateX(0)}
-.bloque-recepcion{transform:translateX(60px)}
-.posicion-despedida.visible .bloque-despedida{opacity:1;transform:translateY(0)}
-.bloque-despedida{transform:translateY(60px)}
-.wrap-regalo{text-align:center;margin:15px 0}
-.regalo-frase{font-family:'Great Vibes',cursive;font-size:1.8em;margin-bottom:8px;color:#cd6796}
-@media(max-width:600px){.contador{top:88%;gap:12px;padding:6px}.contador span{font-size:2em}.contador label{font-size:1.2em}.wrap-ubicacion{bottom:14%}.wrap-confirmacion{bottom:11%}.boton-ubicacion{font-size:.95em;padding:7px 14px}.corazon{width:50px}.contenido-rosa{font-size:1.4em;padding:15px}}
-</style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Invitación XV Lucía Raquel</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=EB+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet"/>
+
+  <!-- Open Graph para redes sociales -->
+  <meta property="og:title" content="Invitación XV Lucía Raquel"/>
+  <meta property="og:description" content="Te invito a celebrar mis XV años con alegría y emoción"/>
+  <meta property="og:image" content="https://raw.githubusercontent.com/geraldream/xvluciaraquel/0aebfe245bc623b708eb81dd74f7d687777c62a7/Portada.jpg"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://geraldream.github.io/xvluciaraquel/"/>
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:#fffafc;font-family:'Montserrat',sans-serif;overflow-x:hidden}
+    .contenedor{max-width:1080px;margin:auto;display:flex;flex-direction:column;align-items:center}
+    .encabezado{position:relative;display:flex;flex-direction:column;align-items:center;overflow:hidden;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.25),0 4px 10px rgba(0,0,0,.15)}
+    .imagen-encabezado{width:100%;max-height:100vh;object-fit:contain}
+    .contador{position:absolute;top:85%;left:50%;transform:translateX(-50%);display:flex;gap:18px;padding:8px 15px;text-align:center;z-index:2}
+    .contador div{display:flex;flex-direction:column;align-items:center;min-width:70px}
+    .contador span{font-size:2.4em;font-weight:bold;color:#cd6796;font-family:'Great Vibes',cursive;line-height:1.1;text-shadow:0 0 1px #cd6796}
+    .contador label{font-size:1.5em;font-weight:bold;color:#cd6796;font-family:'Great Vibes',cursive;margin-top:4px;line-height:1.1;text-shadow:0 0 1px #cd6796}
+    .boton-musica{position:absolute;top:15px;right:15px;background:rgba(255,255,255,.7);border:none;border-radius:50%;width:40px;height:40px;font-size:20px;color:#cd6796;cursor:pointer;display:flex;justify-content:center;align-items:center;z-index:3}
+    .boton-musica:hover{background:rgba(255,255,255,.9)}
+    .rectangulo-rosa{width:100%;display:flex;justify-content:center;background:#fffafc;position:relative}
+    .fondo-rosa{max-width:410px;display:block;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.25),0 4px 10px rgba(0,0,0,.15)}
+    .contenido-rosa,.contenido-padres{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:410px;width:100%;text-align:center;z-index:2}
+    .contenido-rosa{color:#cd6796;font-family:'EB Garamond',serif;font-weight:700;font-size:1.6em;line-height:1.4;opacity:0;transition:opacity 2.5s}
+    .contenido-rosa.visible{opacity:1}
+    @keyframes bailar{0%{transform:translateX(0) rotate(0)}25%{transform:translateX(-5px) rotate(-3deg)}50%{transform:translateX(0) rotate(0)}75%{transform:translateX(5px) rotate(3deg)}100%{transform:translateX(0) rotate(0)}}
+    .corazon{margin-top:20px;width:60px;animation:bailar 3s infinite ease-in-out}
+    .contenido-padres{font-size:1.4em;line-height:1.5;color:#cd6796}
+    .contenido-padres .great{font-family:'Great Vibes',cursive;font-size:1.6em}
+    .wrap-ubicacion{position:absolute;left:50%;transform:translateX(-50%);bottom:16%;z-index:2;text-align:center}
+    .wrap-confirmacion{position:absolute;left:50%;transform:translateX(-50%);bottom:9.5%;z-index:3;text-align:center}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+    .boton-ubicacion{padding:8px 16px;background:#fad5e6;border:2px solid #cd6796;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:1em;color:#cd6796;text-decoration:none;display:inline-block;animation:pulse 2s infinite}
+    .boton-ubicacion:hover{background:#fce6f0}
+    .bloque-padres,.bloque-ceremonia,.bloque-recepcion,.bloque-despedida{opacity:0;transition:all 1.5s ease;position:relative}
+    .posicion-padres.visible .bloque-padres{opacity:1;transform:translateY(0)}
+    .bloque-padres{transform:translateY(60px)}
+    .posicion-ceremonia.visible .bloque-ceremonia{opacity:1;transform:translateX(0)}
+    .bloque-ceremonia{transform:translateX(-60px)}
+    .posicion-recepcion.visible .bloque-recepcion{opacity:1;transform:translateX(0)}
+    .bloque-recepcion{transform:translateX(60px)}
+    .posicion-despedida.visible .bloque-despedida{opacity:1;transform:translateY(0)}
+    .bloque-despedida{transform:translateY(60px)}
+    .wrap-regalo{text-align:center;margin:15px 0}
+    .regalo-frase{font-family:'Great Vibes',cursive;font-size:1.8em;margin-bottom:8px;color:#cd6796}
+    @media(max-width:600px){.contador{top:88%;gap:12px;padding:6px}.contador span{font-size:2em}.contador label{font-size:1.2em}.wrap-ubicacion{bottom:14%}.wrap-confirmacion{bottom:11%}.boton-ubicacion{font-size:.95em;padding:7px 14px}.corazon{width:50px}.contenido-rosa{font-size:1.4em;padding:15px}}
+  </style>
 </head>
 <body><div class="contenedor">
 <section class="encabezado"><audio id="musica" autoplay loop><source src="Musica.mp3" type="audio/mpeg"/></audio><button class="boton-musica" id="botonMusica">⏸</button><img src="Encabezado.png" class="imagen-encabezado" alt="Encabezado"><div class="contador"><div><span id="dias">00</span><label>Días</label></div><div><span id="horas">00</span><label>Horas</label></div><div><span id="minutos">00</span><label>Minutos</label></div><div><span id="segundos">00</span><label>Segundos</label></div></div></section>
