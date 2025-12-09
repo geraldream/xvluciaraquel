@@ -123,21 +123,33 @@
       z-index:3;
       box-shadow:none;
       outline:none;
+      -webkit-tap-highlight-color: transparent !important;
     }
 
-    /* ✅ FIX DEFINITIVO: NO MÁS NARANJA EN MÓVIL NI PC */
-    .boton-musica,
+    /* ✅ FIX FINAL: mata el naranja en TODOS los estados */
     .boton-musica:focus,
     .boton-musica:active,
-    .boton-musica:focus-visible,
-    .boton-musica::-moz-focus-inner {
-      background:rgba(255,255,255,0.7) !important;
+    .boton-musica:focus-visible {
+      background:rgba(255,255,255,.7) !important;
       color:#cd6796 !important;
       border:none !important;
       outline:none !important;
       box-shadow:none !important;
-      -webkit-tap-highlight-color:transparent !important;
     }
+
+    .boton-musica::-moz-focus-inner{
+      border:0 !important;
+    }
+
+    /* iOS */
+    button,
+    .boton-musica {
+      -webkit-appearance:none !important;
+      appearance:none !important;
+    }
+
+    /* Android */
+    *:focus { outline:none !important; }
 
     .rectangulo-rosa{
       width:100%;
@@ -279,7 +291,6 @@
     }
   </style>
 </head>
-
 
 <body>
 
