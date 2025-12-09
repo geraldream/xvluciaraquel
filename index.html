@@ -5,197 +5,389 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Invitación XV Lucía Raquel</title>
 
-  <!-- Fuentes -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=EB+Garamond:wght@700&family=Great+Vibes&display=swap" rel="stylesheet"/>
 
-  <!-- Open Graph / Miniatura -->
   <meta property="og:title" content="Invitación XV Lucía Raquel"/>
-  <meta property="og:description" content="Te invito a celebrar mis XV años con alegría y emoción"/>
+  <meta property="og:description" content="Lucía te invita a celebrar sus XV años"/>
   <meta property="og:image" content="Portada.jpg"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://geraldream.github.io/xvluciaraquel/"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:image" content="Portada.jpg"/>
 
-  <!-- Estilos -->
   <style>
-    *{margin:0;padding:0;box-sizing:border-box}html,body{height:100%}
+    *{margin:0;padding:0;box-sizing:border-box}
+    html,body{height:100%}
     body{background:#fffafc;font-family:'Montserrat',sans-serif;overflow:hidden;min-height:100vh}
-    @media(min-width:1024px){body.fondo-yeso{background:url("Yeso.jpg") center/cover no-repeat fixed}}
 
-    /* Sobre */
-    #sobre{width:100vw;height:100vh;display:flex;justify-content:center;align-items:center;background:#fffafc;position:fixed;top:0;left:0;z-index:100}
-    #sobre img{max-width:100vw;max-height:100vh;object-fit:contain;cursor:pointer}
+    @media(min-width:1024px){
+      body.fondo-yeso{
+        background:url("Yeso.jpg") center/cover no-repeat fixed;
+      }
+    }
 
-    /* Invitación */
-    #invitacion{display:none;overflow-y:auto;position:relative;width:100vw;min-height:100vh}
-    .contenedor{max-width:1080px;margin:0 auto;display:flex;flex-direction:column;align-items:center;padding:24px 16px 40px}
+    #sobre{
+      width:100vw;height:100vh;
+      display:flex;justify-content:center;align-items:center;
+      background:#fffafc;
+      position:fixed;top:0;left:0;z-index:100;
+    }
+    #sobre img{
+      max-width:100vw;max-height:100vh;
+      object-fit:contain;cursor:pointer;
+    }
 
-    /* Encabezado sin cortes en PC */
-    .encabezado{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;overflow:hidden;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.25),0 4px 10px rgba(0,0,0,.15);background:transparent}
-    .imagen-encabezado{width:100%;height:100%;object-fit:contain}
-    .contador{position:absolute;bottom:5%;left:50%;transform:translateX(-50%);display:flex;gap:18px;padding:8px 15px;text-align:center;z-index:2}
-    .contador div{display:flex;flex-direction:column;align-items:center;min-width:70px}
-    .contador span{font-size:2.4em;font-weight:bold;color:#cd6796;font-family:'Great Vibes',cursive;text-shadow:0 0 1px #cd6796}
-    .contador label{font-size:1.5em;font-weight:bold;color:#cd6796;font-family:'Great Vibes',cursive;margin-top:4px;text-shadow:0 0 1px #cd6796}
-    .boton-musica{position:absolute;top:15px;right:15px;background:rgba(255,255,255,.7);border:none;border-radius:50%;width:40px;height:40px;font-size:20px;color:#cd6796;cursor:pointer;display:flex;justify-content:center;align-items:center;z-index:3}
-    .boton-musica:hover{background:rgba(255,255,255,.9)}
+    #invitacion{
+      display:none;
+      overflow-y:auto;
+      position:relative;
+      width:100vw;
+      min-height:100vh;
+    }
+    .contenedor{
+      max-width:1080px;
+      margin:0 auto;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      padding:24px 16px 40px;
+    }
 
-    /* Secciones */
-    .rectangulo-rosa{width:100%;display:flex;justify-content:center;position:relative;margin-top:24px;background:transparent}
-    .fondo-rosa{max-width:410px;display:block;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.25),0 4px 10px rgba(0,0,0,.15)}
+    .encabezado{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      overflow:hidden;
+      border-radius:8px;
+      box-shadow:0 8px 20px rgba(0,0,0,.25),0 4px 10px rgba(0,0,0,.15);
+      background:transparent;
+    }
+    .imagen-encabezado{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
 
-    /* Texto sobre imágenes */
-    .contenido-rosa,.contenido-padres{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:410px;width:100%;text-align:center;z-index:2}
-    .contenido-rosa{color:#cd6796;font-family:'EB Garamond',serif;font-weight:700;font-size:1.6em;line-height:1.4;opacity:0;transition:opacity 2.5s}
-    .animado.visible .contenido-rosa{opacity:1}
+    .contador{
+      position:absolute;
+      bottom:5%;
+      left:50%;
+      transform:translateX(-50%);
+      display:flex;
+      flex-direction:row;
+      gap:18px;
+      padding:8px 15px;
+      text-align:center;
+      z-index:2;
+    }
+    .contador div{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      min-width:70px;
+    }
+    .contador span{
+      font-size:2.4em;
+      font-weight:bold;
+      color:#cd6796;
+      font-family:'Great Vibes',cursive;
+      text-shadow:0 0 1px #cd6796;
+    }
+    .contador label{
+      font-size:1.5em;
+      font-weight:bold;
+      color:#cd6796;
+      font-family:'Great Vibes',cursive;
+      margin-top:4px;
+      text-shadow:0 0 1px #cd6796;
+    }
 
-    /* Animación decorativa */
-    @keyframes bailar{0%{transform:translateX(0) rotate(0)}25%{transform:translateX(-5px) rotate(-3deg)}50%{transform:translateX(0) rotate(0)}75%{transform:translateX(5px) rotate(3deg)}100%{transform:translateX(0) rotate(0)}}
-    .corazon{margin-top:20px;width:60px;animation:bailar 3s infinite ease-in-out}
+    .boton-musica{
+      position:absolute;
+      top:15px;
+      right:15px;
+      background:none;
+      border:none;
+      border-radius:50%;
+      width:40px;
+      height:40px;
+      font-size:20px;
+      color:#cd6796;
+      cursor:pointer;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      z-index:3;
+      box-shadow:none;
+      outline:none;
+    }
+    .boton-musica:focus{
+      outline:none;
+      box-shadow:none;
+    }
 
-    /* Texto padres/regalos */
-    .contenido-padres{font-size:1.4em;line-height:1.5;color:#cd6796}
-    .contenido-padres .great{font-family:'Great Vibes',cursive;font-size:1.6em}
+    .rectangulo-rosa{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      position:relative;
+      margin-top:24px;
+      background:transparent;
+    }
+    .fondo-rosa{
+      max-width:410px;
+      display:block;
+      border-radius:8px;
+      box-shadow:0 8px 20px rgba(0,0,0,.25),0 4px 10px rgba(0,0,0,.15);
+    }
 
-    /* Botones */
-    .wrap-ubicacion{position:absolute;left:50%;transform:translateX(-50%);bottom:16%;z-index:2;text-align:center}
-    .wrap-confirmacion{position:absolute;left:50%;transform:translateX(-50%);bottom:9.5%;z-index:3;text-align:center}
-    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
-    .boton-ubicacion{padding:8px 16px;background:#fad5e6;border:2px solid #cd6796;border-radius:8px;font-family:'Montserrat',sans-serif;font-size:1em;color:#cd6796;text-decoration:none;display:inline-block;animation:pulse 2s infinite}
-    .boton-ubicacion:hover{background:#fce6f0}
+    .contenido-rosa,
+    .contenido-padres{
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%,-50%);
+      max-width:410px;
+      width:100%;
+      text-align:center;
+      z-index:2;
+    }
 
-    /* Aparición por scroll */
-    .bloque-padres,.bloque-ceremonia,.bloque-recepcion,.bloque-despedida{opacity:0;transition:all 1.5s ease;position:relative}
-    .posicion-padres.visible .bloque-padres{opacity:1;transform:translateY(0)}.bloque-padres{transform:translateY(60px)}
-    .posicion-ceremonia.visible .bloque-ceremonia{opacity:1;transform:translateX(0)}.bloque-ceremonia{transform:translateX(-60px)}
-    .posicion-recepcion.visible .bloque-recepcion{opacity:1;transform:translateX(0)}.bloque-recepcion{transform:translateX(60px)}
-    .posicion-despedida.visible .bloque-despedida{opacity:1;transform:translateY(0)}.bloque-despedida{transform:translateY(60px)}
+    .contenido-rosa{
+      color:#cd6796;
+      font-family:'EB Garamond',serif;
+      font-weight:700;
+      font-size:1.6em;
+      line-height:1.4;
+      opacity:1 !important;
+      transition:none !important;
+    }
 
-    /* Regalos */
+    @keyframes bailar{
+      0%{transform:translateX(0) rotate(0)}
+      25%{transform:translateX(-5px) rotate(-3deg)}
+      50%{transform:translateX(0) rotate(0)}
+      75%{transform:translateX(5px) rotate(3deg)}
+      100%{transform:translateX(0) rotate(0)}
+    }
+    .corazon{
+      margin-top:20px;
+      width:60px;
+      animation:bailar 3s infinite ease-in-out;
+    }
+
+    .contenido-padres{
+      font-size:1.4em;
+      line-height:1.5;
+      color:#cd6796;
+    }
+    .contenido-padres .great{
+      font-family:'Great Vibes',cursive;
+      font-size:1.6em;
+    }
+
+    .wrap-ubicacion,
+    .wrap-confirmacion{
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      text-align:center;
+      z-index:3;
+    }
+    .wrap-ubicacion{bottom:16%}
+    .wrap-confirmacion{bottom:9.5%}
+
+    @keyframes pulse{
+      0%{transform:scale(1)}
+      50%{transform:scale(1.08)}
+      100%{transform:scale(1)}
+    }
+    .boton-ubicacion{
+      padding:8px 16px;
+      background:#fad5e6;
+      border:2px solid #cd6796;
+      border-radius:8px;
+      font-family:'Montserrat',sans-serif;
+      font-size:1em;
+      color:#cd6796;
+      text-decoration:none;
+      display:inline-block;
+      animation:pulse 2s infinite;
+    }
+
+    .bloque-padres,
+    .bloque-ceremonia,
+    .bloque-recepcion,
+    .bloque-despedida{
+      opacity:1 !important;
+      transform:none !important;
+      transition:none !important;
+      position:relative;
+    }
+
     .wrap-regalo{text-align:center;margin:15px 0}
-    .regalo-frase{font-family:'Great Vibes',cursive;font-size:1.8em;margin-bottom:8px;color:#cd6796}
+    .regalo-frase{
+      font-family:'Great Vibes',cursive;
+      font-size:1.8em;
+      margin-bottom:8px;
+      color:#cd6796;
+    }
 
-    /* Responsive */
     @media(max-width:600px){
-      .contador{bottom:2%;gap:12px;padding:6px}
-      .contador span{font-size:2em}
-      .contador label{font-size:1.2em}
-      .wrap-ubicacion{bottom:14%}
-      .wrap-confirmacion{bottom:11%}
-      .boton-ubicacion{font-size:.95em;padding:7px 14px}
-      .corazon{width:50px}
-      .contenido-rosa{font-size:1.4em;padding:15px}
+      .encabezado{
+        height:auto !important;
+        padding:0 !important;
+        overflow:visible !important;
+      }
+      .imagen-encabezado{
+        width:100% !important;
+        height:auto !important;
+        max-height:100vh !important;
+        object-fit:contain !important;
+      }
+      .contador{
+        bottom:2% !important;
+        transform:translateX(-50%) !important;
+        position:absolute !important;
+        flex-direction:row !important;
+        gap:14px !important;
+        padding:6px 10px !important;
+      }
+      .contador div{
+        min-width:70px !important;
+        padding:0 4px !important;
+      }
+      .contador span{
+        font-size:2em !important;
+      }
+      .contador label{
+        font-size:1.2em !important;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Sobre -->
-  <div id="sobre"><img src="Sobre.jpg" alt="Abrir invitación" id="abrir"></div>
+  <div id="sobre">
+    <img src="Sobre.jpg" alt="Abrir invitación" id="abrir">
+  </div>
 
   <!-- Invitación -->
-  <div id="invitacion"><div class="contenedor">
+  <div id="invitacion">
+    <div class="contenedor">
 
-    <!-- Encabezado -->
-    <section class="encabezado">
-      <audio id="musica" autoplay loop><source src="Musica.mp3" type="audio/mpeg"/></audio>
-      <button class="boton-musica" id="botonMusica">⏸</button>
-      <img src="Encabezado.jpg" class="imagen-encabezado" alt="Encabezado"/>
-      <div class="contador">
-        <div><span id="dias">00</span><label>Días</label></div>
-        <div><span id="horas">00</span><label>Horas</label></div>
-        <div><span id="minutos">00</span><label>Minutos</label></div>
-        <div><span id="segundos">00</span><label>Segundos</label></div>
-      </div>
-    </section>
+      <!-- Encabezado -->
+      <section class="encabezado">
+        <audio id="musica" loop>
+          <source src="Musica.mp3" type="audio/mpeg">
+        </audio>
 
-    <!-- Texto rosa -->
-    <div class="rectangulo-rosa animado">
-      <img src="Rectangulo Rosa.png" alt="Rectángulo Rosa" class="fondo-rosa"/>
-      <div class="contenido-rosa">
-        <p>Con cariño y emoción,<br>te invito a acompañarme<br>en una celebración que<br>guardaré por siempre.</p>
-        <img src="Corazon.png" alt="Corazón decorativo" class="corazon"/>
-      </div>
-    </div>
+        <button class="boton-musica" id="botonMusica">⏸</button>
 
-    <!-- Padres y padrinos -->
-    <div class="rectangulo-rosa posicion-padres">
-      <div class="bloque-padres">
-        <img src="Padres y Padrinos.jpg" alt="Padres y Padrinos" class="fondo-rosa"/>
-      </div>
-    </div>
+        <img src="Encabezado.jpg" class="imagen-encabezado" alt="Encabezado">
 
-    <!-- Ceremonia religiosa -->
-    <div class="rectangulo-rosa posicion-ceremonia">
-      <div class="bloque-ceremonia">
-        <img src="Ceremonia Religiosa.jpg" alt="Ceremonia Religiosa" class="fondo-rosa"/>
-        <div class="wrap-ubicacion">
-          <a class="boton-ubicacion" href="https://maps.app.goo.gl/YDJtuetg9AWqMCSa6" target="_blank" rel="noopener">Ver Ubicación</a>
+        <div class="contador">
+          <div><span id="dias">00</span><label>Días</label></div>
+          <div><span id="horas">00</span><label>Horas</label></div>
+          <div><span id="minutos">00</span><label>Minutos</label></div>
+          <div><span id="segundos">00</span><label>Segundos</label></div>
+        </div>
+      </section>
+
+      <!-- Texto rosa -->
+      <div class="rectangulo-rosa animado">
+        <img src="Rectangulo Rosa.png" alt="Rectángulo Rosa" class="fondo-rosa">
+        <div class="contenido-rosa">
+          <p>Con cariño y emoción,<br>te invito a acompañarme<br>en una celebración que<br>guardaré por siempre.</p>
+          <img src="Corazon.png" alt="Corazón decorativo" class="corazon">
         </div>
       </div>
-    </div>
 
-    <!-- Recepción -->
-    <div class="rectangulo-rosa posicion-recepcion">
-      <div class="bloque-recepcion">
-        <img src="Recepcion.jpg" alt="Recepción" class="fondo-rosa"/>
-        <div class="wrap-ubicacion">
-          <a class="boton-ubicacion" href="https://maps.app.goo.gl/j3D9pn4Yf1aqyWgv8" target="_blank" rel="noopener">Ver Ubicación</a>
+      <!-- Padres y padrinos -->
+      <div class="rectangulo-rosa posicion-padres">
+        <div class="bloque-padres">
+          <img src="Padres y Padrinos.jpg" alt="Padres y Padrinos" class="fondo-rosa">
         </div>
       </div>
-    </div>
 
-    <!-- Regalos -->
-    <div class="rectangulo-rosa">
-      <img src="Rectangulo Rosa2.png" alt="Rectángulo Rosa sección regalos" class="fondo-rosa"/>
-      <div class="contenido-padres">
-        <p class="regalo-frase">Tu compañía</p>
-        <p class="regalo-frase">es mi mejor regalo</p>
-        <img src="Regalo.png" alt="Icono de regalo" class="corazon"/>
-        <p class="great">Si deseas obsequiar algo:</p>
-        <div class="wrap-regalo">
-          <a class="boton-ubicacion" href="https://www.liverpool.com.mx/tienda/home" target="_blank" rel="noopener">Ver Mesa de Regalos</a>
-        </div>
-        <p class="great">Regalo en efectivo</p>
-        <p class="montserrat">Banco: Santander</p>
-        <p class="montserrat">Nombre: Geraldine Romero</p>
-        <p class="montserrat">Cuenta: 1234 5678 9012 3456</p>
-      </div>
-    </div>
-
-    <!-- Despedida y confirmación -->
-    <div class="rectangulo-rosa posicion-despedida">
-      <div class="bloque-despedida">
-        <img src="Despedida Confirmacion.jpg" alt="Despedida y Confirmación" class="fondo-rosa"/>
-        <div class="wrap-confirmacion">
-          <a class="boton-ubicacion" href="https://wa.me/525530759268?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20Años%20de%20Lucía...." target="_blank" rel="noopener">Confirmar Asistencia</a>
+      <!-- Ceremonia religiosa -->
+      <div class="rectangulo-rosa posicion-ceremonia">
+        <div class="bloque-ceremonia">
+          <img src="Ceremonia Religiosa.jpg" alt="Ceremonia Religiosa" class="fondo-rosa">
+          <div class="wrap-ubicacion">
+            <a class="boton-ubicacion" href="https://maps.app.goo.gl/YDJtuetg9AWqMCSa6" target="_blank" rel="noopener">Ver Ubicación</a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Galería final -->
-    <div class="rectangulo-rosa">
-      <img src="Lucia1.png" alt="Lucía 1" class="fondo-rosa"/>
-    </div>
-
-    <!-- Redes sociales -->
-    <div class="rectangulo-rosa" style="position:relative">
-      <img src="Lucia2.png" alt="Lucía 2" class="fondo-rosa"/>
-      <div style="position:absolute;bottom:1%;left:50%;transform:translateX(-50%);display:flex;gap:18px;z-index:2">
-        <a href="https://wa.me/525530759268?text=Hola..." target="_blank" rel="noopener">
-          <img src="Whatsapp.png" alt="WhatsApp" style="width:40px;height:40px;animation:pulse 2s infinite"/>
-        </a>
-        <a href="https://www.facebook.com/profile.php?id=61581110590628" target="_blank" rel="noopener">
-          <img src="Facebook.png" alt="Facebook" style="width:40px;height:40px;animation:pulse 2s infinite"/>
-        </a>
-        <a href="https://www.instagram.com/geraldreamworks/" target="_blank" rel="noopener">
-          <img src="Instagram.png" alt="Instagram" style="width:40px;height:40px;animation:pulse 2s infinite"/>
-        </a>
+      <!-- Recepción -->
+      <div class="rectangulo-rosa posicion-recepcion">
+        <div class="bloque-recepcion">
+          <img src="Recepcion.jpg" alt="Recepción" class="fondo-rosa">
+          <div class="wrap-ubicacion">
+            <a class="boton-ubicacion" href="https://maps.app.goo.gl/j3D9pn4Yf1aqyWgv8" target="_blank" rel="noopener">Ver Ubicación</a>
+          </div>
+        </div>
       </div>
-    </div>
 
-  </div></div>
+      <!-- Regalos -->
+      <div class="rectangulo-rosa">
+        <img src="Rectangulo Rosa2.png" alt="Rectángulo Rosa sección regalos" class="fondo-rosa">
+        <div class="contenido-padres">
+          <p class="regalo-frase">Tu compañía</p>
+          <p class="regalo-frase">es mi mejor regalo</p>
+          <img src="Regalo.png" alt="Icono de regalo" class="corazon">
+          <p class="great">Si deseas obsequiar algo:</p>
+          <div class="wrap-regalo">
+            <a class="boton-ubicacion" href="https://www.liverpool.com.mx/tienda/home" target="_blank" rel="noopener">Ver Mesa de Regalos</a>
+          </div>
+          <p class="great">Regalo en efectivo</p>
+          <p class="montserrat">Banco: Santander</p>
+          <p class="montserrat">Nombre: Geraldine Romero</p>
+          <p class="montserrat">Cuenta: 1234 5678 9012 3456</p>
+        </div>
+      </div>
+
+      <!-- Despedida y confirmación -->
+      <div class="rectangulo-rosa posicion-despedida">
+        <div class="bloque-despedida">
+          <img src="Despedida Confirmacion.jpg" alt="Despedida y Confirmación" class="fondo-rosa">
+          <div class="wrap-confirmacion">
+            <a class="boton-ubicacion" href="https://wa.me/525530759268?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20los%20XV%20Años%20de%20Lucía...." target="_blank" rel="noopener">Confirmar Asistencia</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Galería final -->
+      <div class="rectangulo-rosa">
+        <img src="Lucia1.png" alt="Lucía 1" class="fondo-rosa">
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="rectangulo-rosa" style="position:relative">
+        <img src="Lucia2.png" alt="Lucía 2" class="fondo-rosa">
+        <div style="position:absolute;bottom:1%;left:50%;transform:translateX(-50%);display:flex;gap:18px;z-index:2">
+          <a href="https://wa.me/525530759268?text=Hola..." target="_blank" rel="noopener">
+            <img src="Whatsapp.png" alt="WhatsApp" style="width:40px;height:40px;animation:pulse 2s infinite">
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61581110590628" target="_blank" rel="noopener">
+            <img src="Facebook.png" alt="Facebook" style="width:40px;height:40px;animation:pulse 2s infinite">
+          </a>
+          <a href="https://www.instagram.com/geraldreamworks/" target="_blank" rel="noopener">
+            <img src="Instagram.png" alt="Instagram" style="width:40px;height:40px;animation:pulse 2s infinite">
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
 
   <script>
     // Referencias
