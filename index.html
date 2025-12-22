@@ -442,7 +442,7 @@
     // Contador
     const d=document.getElementById('dias'),h=document.getElementById('horas'),m=document.getElementById('minutos'),s=document.getElementById('segundos'),z=v=>v<10?'0'+v:v;
     function tick(){
-      const fechaEvento=new Date('2025-12-13T19:00:00');
+      const fechaEvento=new Date('2026-12-13T19:00:00');
       let r=Math.max(0,fechaEvento-Date.now());
       d.textContent=z(Math.floor(r/86400000));
       h.textContent=z(Math.floor((r%86400000)/3600000));
